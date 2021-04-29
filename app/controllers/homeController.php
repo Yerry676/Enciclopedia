@@ -1,10 +1,10 @@
 <?php
 
-class HomeController
+class HomeController extends Controller
 {
     public function index()
     {
-        //echo "PÁGINA DE INICIO";
-        require_once("../app/views/home/index.php");
+       // require_once("../app/views/home/index.php");
+        $this->renderView("home/index");
     }
 }
