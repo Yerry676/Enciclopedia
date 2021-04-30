@@ -14,19 +14,19 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-5">
-        <h1>Esperanza Matemática</h1>
+        <h1>Ganancia Neta</h1>
 
-        <form action="<?= URL ?>apuestas/esperanza" method="POST">
+        <form action="<?= URL ?>apuestas/ganancianeta" method="POST">
           <div class="form-group">
-            <label for="exampleInputEmail1">Cuota</label>
-            <input type="number" name="cuota" class="form-control" value="<?= $params['cuota']?>" step="any" >
+            <label for="exampleInputEmail1">Apuesta(S/)</label>
+            <input type="number" name="apuesta" class="form-control" value="<?= $params['apuesta'] ?>" step="1">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Probabilidad(%)</label>
-            <input type="number" name="prob" class="form-control" value="<?= $params['probabilidad'] ?>" step="1" >
+            <label for="exampleInputPassword1">Cuota</label>
+            <input type="number" name="cuota" class="form-control" value="<?= $params['cuota'] ?>" step="0.01">
           </div>
           <button type="submit" class="btn btn-primary">Calcular</button>
-          <p>La esperanza Matemática es : <?= $params['res'] == 0 ? "" : $params['res']  ?></p>
+          <p>La ganancia Neta es : <?= $params['ganancia'] == 0 ? "" : $params['ganancia'] ?></p>
         </form>
       </div>
     </div>
