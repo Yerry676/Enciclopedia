@@ -2,21 +2,24 @@
 
 class ApuestasController extends Controller{
 
-  // public function index(Type $var = null)
-  // {
-  //   # code...
-  // }
   public function Esperanza()
   {
     $cuota = isset($_POST['cuota']) ? $_POST['cuota'] : 0;
     $prob = isset($_POST['prob']) ? $_POST['prob'] : 0;
     $esperanza = $cuota * ($prob/100) ;
+    $res = '';
+    if($esperanza > 1 ){
+      $res = 'Favorable';
+    }else if($esperanza != 0){
+      $res = 'Desfavorable';
+    }
     $params = [
       'cuota' => $cuota,
       'probabilidad' => $prob,
-      'res'=> $esperanza
+      'res'=> $esperanza,
+      'esperanza' => $res
     ];
-    $this->renderView("apuestas/esperanza",$params);
+    $this->renderView("apuestas/esperanza",$params, titulo: "Esperanza Matematica");
   }
 
   public function pca(){
@@ -26,7 +29,7 @@ class ApuestasController extends Controller{
       'cuota' => $cuota,
       'res' => $pca
     ];
-    $this->renderView("apuestas/pca", $params);
+    $this->renderView("apuestas/pca", $params, titulo: "Probabilidad de casa de apuesta");
   }
   public function gananciaNeta()
   {
@@ -38,7 +41,7 @@ class ApuestasController extends Controller{
       'cuota' => $cuota,
       'ganancia' => $GananciaNeta
     ];
-    $this->renderView("apuestas/ganancianeta", $params);
+    $this->renderView("apuestas/ganancianeta", $params, titulo: "Ganancia Neta");
   }
   public function roi()
   {
@@ -54,6 +57,6 @@ class ApuestasController extends Controller{
       'inversiont' => $inversionTotal,
       'roi' => $roi
     ];
-    $this->renderView("apuestas/roi", $params);
+    $this->renderView("apuestas/roi", $params, $params, titulo: "Ganancia Neta");
   }
 }
