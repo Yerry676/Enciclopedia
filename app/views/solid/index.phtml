@@ -1,12 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilos.css">
   <title>Solid</title>
 </head>
+
 <body>
-  <h1>SolidSistemas</h1>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">La Enciclopedia de "BIZZY"</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Area de desarrollo de sistemas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="<?= URL ?>sistemas">Principios Solid</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Area de Apuestas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Esperanza Matemática</a>
+            <a class="dropdown-item" href="#">Probabilidad de la casa de apuesta (PCA)</a>
+            <a class="dropdown-item" href="#">Ganancia Neta</a>
+            <a class="dropdown-item" href="#">ROI</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="card bg-dark text-white">
+    <img src="img/solid.jpg" class="card-img" alt="...">
+  </div>
+  <br>
+  <h1 style="text-align: center;">Desarrollo de Sistemas</h1>
+
+  <br>
+
+  <div class="sol container">
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="img/s.jpg" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Single Responsibility Principle (SRP)</h5>
+            <p class="card-text">"Una clase debe tener una, y solo una, razón para cambiar" <br> Según este principio “una clase
+              debería tener una, y solo una, razón para cambiar”. Es esto, precisamente, “razón para cambiar”, lo
+              que Robert C. Martin identifica como “responsabilidad”.</p>
+            <div class="col-md-8">
+              <img src="img/responsabilidadunica.png" class="card-img" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="img/o.jpg" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Open/Closed Principle (OCP)</h5>
+            <p class="card-text">"Debería poder extender el comportamiento de una clase, sin modificarlo" <br> El código debería
+              estar abierto para extenderlo y para añadirle nuevas funcionalidades, pero en cambio debería estar cerrado
+              a modificaciones, salvo las modificaciones que se deban realizar si se encuentra algún error.</p>
+            <div class="col-md-8">
+              <img src="img/abiertocerrado.png" class="card-img" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="img/l.jpg" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Liskov Substitution Principle (LSP)</h5>
+            <p class="card-text">"Las clases derivadas deben ser sustituibles por sus clases base" <br> La L de SOLID alude al apellido
+              de quien lo creó, Barbara Liskov, y dice que “las clases derivadas deben poder sustituirse por sus clases base”.
+              <br>
+              Esto significa que los objetos deben poder ser reemplazados por instancias de sus subtipos sin alterar el correcto
+              funcionamiento del sistema o lo que es lo mismo: si en un programa utilizamos cierta clase, deberíamos poder usar
+              cualquiera de sus subclases sin interferir en la funcionalidad del programa.
+            </p>
+            <div class="col-md-8">
+              <img src="img/susticicion.png" class="card-img" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="img/i.jpg" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Interface Segregation Principle (ISP)</h5>
+            <p class="card-text">"Cree interfaces detalladas que sean específicas del cliente" <br> En el cuarto principio de
+              SOLID, el tío Bob sugiere: “Haz interfaces que sean específicas para un tipo de cliente”, es decir, para
+              una finalidad concreta y que tengan responsabilidades mas no se hacer interfaces grandes.</p>
+            <div class="col-md-8">
+              <img src="img/segregacion.png" class="card-img" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="img/d.jpg" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Dependency Inversion Principle (DIP)</h5>
+            <p class="card-text">"Dependen de abstracciones, no de concreciones" <br>
+              Los módulos de alto nivel no deberían depender de módulos de bajo nivel. Ambos deberían depender de abstracciones.<br>
+              Las abstracciones no deberían depender de los detalles. Los detalles deberían depender de las abstracciones.<br>
+              El objetivo del (DIP) consiste en reducir las dependencias entre los módulos del código,
+              es decir, alcanzar un bajo acoplamiento de las clases.</p>
+            <div class="col-md-8">
+              <img src="img/dependencia.png" class="card-img" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>
+      55
+    </p>
+  </footer>
+
 </body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </html>
